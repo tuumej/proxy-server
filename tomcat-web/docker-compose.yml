@@ -6,8 +6,7 @@ services:
       - 8081:8080
     container_name: tomcat-web1
     volumes:
-      - ./index.html:/usr/local/tomcat/webapps/ROOT/index.jsp
-    command: mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps
+      - ./index.html:/usr/local/tomcat/webapps.dist/ROOT/index.jsp
 
   web2:
     image: tomcat:latest
@@ -15,5 +14,4 @@ services:
       - 8082:8080
     container_name: tomcat-web2
     volumes:
-      - ./index.jsp:/usr/local/tomcat/webapps/ROOT/index.jsp
-    command: mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps
+      - ./index.jsp:/usr/local/tomcat/webapps.dist/ROOT/index.jsp
